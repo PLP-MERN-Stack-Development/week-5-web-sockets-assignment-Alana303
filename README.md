@@ -1,78 +1,105 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19874028&assignment_repo_type=AssignmentRepo)
-# Real-Time Chat Application with Socket.io
+# 💬 Real-Time Chat Application with Socket.io
 
-This assignment focuses on building a real-time chat application using Socket.io, implementing bidirectional communication between clients and server.
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![React](https://img.shields.io/badge/Frontend-React-blue.svg)
+![Node](https://img.shields.io/badge/Backend-Node.js-yellow.svg)
+![Socket.io](https://img.shields.io/badge/RealTime-Socket.io-black.svg)
 
-## Assignment Overview
+This is a full-stack real-time chat application built with **React**, **Express**, and **Socket.io**, completed as part of **Week 5 Assignment** in the Power Learn Project MERN Stack course.
 
-You will build a chat application with the following features:
-1. Real-time messaging using Socket.io
-2. User authentication and presence
-3. Multiple chat rooms or private messaging
-4. Real-time notifications
-5. Advanced features like typing indicators and read receipts
+---
 
-## Project Structure
+## 🚀 Features Implemented
 
-```
+### ✅ **Task 1: Basic Chat Functionality**
+- Global chat messages with live delivery using WebSockets
+- Users can join and leave the chat room
+- Username input and display
+- Persistent chat state per session
+
+### ✅ **Task 2: Typing Indicators**
+- Real-time typing notifications
+- Displays “User is typing…” below the chat area
+- Optimized to prevent constant socket emission
+
+### ✅ **Task 3: Private Messaging**
+- One-to-one private messages between users
+- Select user from the online list to chat privately
+- Messages tagged with “(Private)” label
+
+### ✅ **Task 4: Notifications**
+- Desktop browser notifications for private messages (when tab is hidden)
+- Notification sound (uses `public/notification.mp3`)
+- Auto title change: shows unread message count in browser tab
+
+### ✅ **Task 5: UX and Performance Improvements**
+- Message delivery confirmation using callback acknowledgment
+- Handles socket disconnection/reconnection with logs
+- Clears unread count when user returns to tab
+- Optimized scrolling/chat history and consistent feedback
+
+---
+
+## 🧠 Tech Stack
+
+| Layer     | Technology         |
+|-----------|--------------------|
+| Frontend  | React (Vite), HTML, CSS |
+| Backend   | Node.js, Express   |
+| Realtime  | Socket.io (v4)     |
+| Notifications | Web API (Notifications, Audio) |
+
+---
+
+## 📂 Project Structure
+
 socketio-chat/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # UI components
-│   │   ├── context/        # React context providers
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── pages/          # Page components
-│   │   ├── socket/         # Socket.io client setup
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Node.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Socket event handlers
-│   ├── models/             # Data models
-│   ├── socket/             # Socket.io server setup
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
-```
+├── client/
+│ ├── public/
+│ │ └── notification.mp3
+│ └── src/
+│ └── App.js
+├── server/
+│ └── server.js
+└── README.md
 
-## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week5-Assignment.md` file
-4. Complete the tasks outlined in the assignment
 
-## Files Included
+---
 
-- `Week5-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Socket.io configuration templates
-  - Sample components for the chat interface
+## 🛠️ Getting Started Locally
 
-## Requirements
+### ⚙️ Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js v18+
 - npm or yarn
-- Modern web browser
-- Basic understanding of React and Express
+- Modern browser
 
-## Submission
+---
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+### 📦 Installation Steps
 
-1. Complete both the client and server portions of the application
-2. Implement the core chat functionality
-3. Add at least 3 advanced features
-4. Document your setup process and features in the README.md
-5. Include screenshots or GIFs of your working application
-6. Optional: Deploy your application and add the URLs to your README.md
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/PLP-MERN-Stack-Development/week-5-web-sockets-assignment-Alana303.git
+   cd week-5-web-sockets-assignment-Alana303
 
-## Resources
 
-- [Socket.io Documentation](https://socket.io/docs/v4/)
-- [React Documentation](https://react.dev/)
-- [Express.js Documentation](https://expressjs.com/)
-- [Building a Chat Application with Socket.io](https://socket.io/get-started/chat) 
+Start the backend server
+
+cd server
+npm install
+npm run dev   # or: node server.js
+Start the frontend client
+
+
+cd client
+npm install
+npm run dev
+Visit your app at: http://localhost:5173
+
+
+ Author: Jeff Amayo
+Full-Stack Developer in Training
+GitHub Profile: https://github.com/PLP-MERN-Stack-Development/week-5-web-sockets-assignment-Alana303.git
+
